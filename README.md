@@ -3,8 +3,8 @@
 「喵译·面对面」（Android 包名 `com.miaos.miaoyi`）**首次运行下载**所需的离线模型，供 App 内直接下载与校验。
 本仓只放模型资产，**不含任何 App 代码**。
 
-- 下载总量 ≈ **785 MB**（zip）｜解压后 ≈ **1.13 GB**
-- 清单（程序读取）：`releases/download/v1.0/models.json`
+- 下载总量 ≈ **867 MB**（zip）｜解压后 ≈ **1.22 GB**
+- 清单（程序读取）：`releases/download/v1.0/models.json`（清单 `version` **1.1.0**；release tag 保持 `v1.0` 不变，App 的 `defaultManifestUrl` 无需改）
 - 装机位置：`/storage/emulated/0/Android/data/com.miaos.miaoyi/files/models/`（`getExternalStorageDirectory()/models`）
 
 ## v1.0 资产清单
@@ -20,6 +20,7 @@
 | `mt-es-zh.zip` | `models/mt/es-zh/` | 西→中 机器翻译（Marian，int8） | `Helsinki-NLP/opus-tatoeba-es-zh` | CC-BY-4.0 |
 | `tts-zh.zip` | `models/tts/zh/` | 中文语音合成（piper VITS，int8） | piper 音色 `zh_CN-xiao_ya-medium` | 见下 ⚠️ |
 | `tts-es.zip` | `models/tts/es/` | 西语语音合成（piper VITS，int8，含 `espeak-ng-data/`） | piper 音色 `es_MX-claude-high` | 训练数据 apache-2.0 |
+| `tts-en.zip` | `models/tts/en/` | 英语语音合成（piper VITS medium，含 `espeak-ng-data/`；051 新增，只播报不识别） | piper 音色 `en_US-libritts_r-medium`（k2-fsa/sherpa-onnx 分发） | CC-BY-4.0 |
 
 ### ⚠️ 中文语音音色的许可提示
 `zh_CN-xiao_ya-medium` 的训练数据为 **Data Baker BZNSYP**，其模型卡标注 **「Non-commercial use」**。
@@ -38,7 +39,7 @@ App 内会自动读取清单、逐个下载 → 校验 `sha256` → 解压 → �
 ```bash
 adb push asr-zh asr-es vad denoise  .../files/models/
 adb push zh-en en-es es-zh          .../files/models/mt/
-adb push zh es                      .../files/models/tts/
+adb push zh es en                    .../files/models/tts/
 ```
 
 ## 目录结构约定
@@ -47,7 +48,7 @@ adb push zh es                      .../files/models/tts/
 models/
   asr-zh/  asr-es/  vad/  denoise/
   mt/{zh-en,en-es,es-zh}/
-  tts/{zh,es}/
+  tts/{zh,es,en}/
   .installed/        # 每个包装好后由 App 写入的标记（不进仓）
   .cache/            # 下载中的 .part（不进仓）
 ```

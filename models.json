@@ -1,12 +1,12 @@
 {
   "schema": 1,
   "app": "miaoyi-face",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "release_tag": "v1.0",
   "base_url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/",
   "models_dir": "models",
-  "total_download_bytes": 784892086,
-  "total_unpacked_bytes": 1128225974,
+  "total_download_bytes": 866715877,
+  "total_unpacked_bytes": 1224748419,
   "stages": [
     {
       "stage": 1,
@@ -142,7 +142,7 @@
         "es": "Síntesis de voz",
         "en": "Speech synthesis"
       },
-      "download_bytes": 36339500,
+      "download_bytes": 118163291,
       "packages": [
         {
           "id": "tts-zh",
@@ -172,6 +172,21 @@
           "bytes": 22586104,
           "unpacked_bytes": 36297208,
           "sha256": "95a2fad5a43dae2a1cc5965d4d1310c4bc6a8ab8fedd807ba4521846068a630e",
+          "files": 357
+        },
+        {
+          "id": "tts-en",
+          "label": {
+            "zh": "英语语音播报",
+            "es": "Voz (inglés)",
+            "en": "English TTS"
+          },
+          "file": "tts-en.zip",
+          "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/tts-en.zip",
+          "target": "tts",
+          "bytes": 81823791,
+          "unpacked_bytes": 96522445,
+          "sha256": "093061108bf0fc8794fad40fdf4e16bd9959f8dbca8ca10201cba645a473d584",
           "files": 357
         }
       ]
