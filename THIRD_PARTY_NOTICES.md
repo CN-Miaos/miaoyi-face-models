@@ -46,7 +46,7 @@
 | `mt-es-zh.zip` | 西→中 机器翻译（Marian, **本项目 int8 量化**） | https://huggingface.co/Helsinki-NLP/opus-tatoeba-es-zh | Apache-2.0 |
 | `mt-en-zh.zip` | 英→中 机器翻译（Marian, **采用上游 int8 导出**） | 原作 https://huggingface.co/Helsinki-NLP/opus-mt-en-zh ；int8 转换 https://huggingface.co/Xenova/opus-mt-en-zh | Apache-2.0 |
 | `mt-es-en.zip` | 西→英 机器翻译（Marian, **采用上游 int8 导出**） | 原作 https://huggingface.co/Helsinki-NLP/opus-mt-es-en ；int8 转换 https://huggingface.co/Xenova/opus-mt-es-en | Apache-2.0 |
-| `tts-zh.zip` | 中文语音音色 | **待替换**：当前为开发期临时音色 `zh_CN-xiao_ya-medium`（训练数据 DataBaker BZNSYP，标注 Non-commercial）；**目标替换为 MeloTTS（MIT）** | MIT（替换后） |
+| `tts-zh.zip` | 中文语音音色 | https://github.com/myshell-ai/MeloTTS | MIT |
 | `tts-es.zip` | 西语语音音色 + `espeak-ng-data/` | piper 音色 `es_MX-claude-high` | 数据集 apache-2.0；`espeak-ng-data/` 为 **GPL-3.0-or-later**（见 §一） |
 | `tts-en.zip` | 英语语音音色 + `espeak-ng-data/` | piper 音色 `en_US-libritts_r-medium`（经 k2-fsa/sherpa-onnx 分发） | CC-BY-4.0；`espeak-ng-data/` 为 **GPL-3.0-or-later**（见 §一） |
 
@@ -65,7 +65,7 @@
 | 许可 | 文件 |
 |---|---|
 | Apache License 2.0 | [`LICENSES/Apache-2.0.txt`](LICENSES/Apache-2.0.txt) |
-| MIT License | [`LICENSES/MIT.txt`](LICENSES/MIT.txt) |
+| MIT License（按组件分列，版权行不同） | [`LICENSES/MIT-onnxruntime.txt`](LICENSES/MIT-onnxruntime.txt)（Microsoft）· [`LICENSES/MIT-SileroVAD.txt`](LICENSES/MIT-SileroVAD.txt)（Silero Team）· [`LICENSES/MIT-MeloTTS.txt`](LICENSES/MIT-MeloTTS.txt)（MyShell.ai） |
 | BSD 3-Clause License | [`LICENSES/BSD-3-Clause.txt`](LICENSES/BSD-3-Clause.txt) |
 | Creative Commons Attribution 4.0 International | [`LICENSES/CC-BY-4.0.txt`](LICENSES/CC-BY-4.0.txt) |
 | GNU GPL v3.0 or later | [`LICENSES/GPL-3.0-or-later.txt`](LICENSES/GPL-3.0-or-later.txt) |

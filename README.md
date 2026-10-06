@@ -20,13 +20,18 @@
 | `mt-es-zh.zip` | `models/mt/es-zh/` | 西→中 机器翻译（Marian，int8） | `Helsinki-NLP/opus-tatoeba-es-zh` | Apache-2.0 |
 | `mt-en-zh.zip` | `models/mt/en-zh/` | 英→中 机器翻译（Marian，int8；052 新增） | 原作 `Helsinki-NLP/opus-mt-en-zh`（int8 转换：`Xenova/opus-mt-en-zh`） | Apache-2.0 |
 | `mt-es-en.zip` | `models/mt/es-en/` | 西→英 机器翻译（Marian，int8；052 新增） | 原作 `Helsinki-NLP/opus-mt-es-en`（int8 转换：`Xenova/opus-mt-es-en`） | Apache-2.0 |
-| `tts-zh.zip` | `models/tts/zh/` | 中文语音合成（piper VITS，int8） | piper 音色 `zh_CN-xiao_ya-medium` | 见下 ⚠️ （**计划替换为 MeloTTS / MIT**） |
+| `tts-zh.zip` | `models/tts/zh/` | 中文语音合成（VITS fp32；2026-10-06 由 piper `xiao_ya` 换为 MeloTTS） | MeloTTS（https://github.com/myshell-ai/MeloTTS） | **MIT** |
 | `tts-es.zip` | `models/tts/es/` | 西语语音合成（piper VITS，int8，含 `espeak-ng-data/`） | piper 音色 `es_MX-claude-high` | 训练数据 apache-2.0 |
 | `tts-en.zip` | `models/tts/en/` | 英语语音合成（piper VITS medium，含 `espeak-ng-data/`；051 新增） | piper 音色 `en_US-libritts_r-medium`（k2-fsa/sherpa-onnx 分发） | CC-BY-4.0 |
 
-### ⚠️ 中文语音音色的许可提示
-`zh_CN-xiao_ya-medium` 的训练数据为 **Data Baker BZNSYP**，其模型卡标注 **「Non-commercial use」**。
-→ 本项目为个人免费使用；**若将来商用/上架收费渠道，需要替换中文音色**（西语 `es_MX-claude-high` 为 apache-2.0，无此限制）。
+### 中文音色许可（已于 2026-10-06 解决 ✓）
+原音色 `zh_CN-xiao_ya-medium`（训练数据 **Data Baker BZNSYP**，模型卡标注 **「Non-commercial use」**）
+**已替换**为 `vits-melo-tts-zh_en`（**MeloTTS，MIT**，包内自带 LICENSE 全文）。
+
+- 包结构不变（`zh/model.onnx` + `zh/tokens.txt` + `zh/lexicon.txt`），**App 侧零改动**。
+- 体积：15.9 MB（zip）→ **152.1 MB**（zip）/ 169.1 MB（解压后）。
+- 清单版本 **1.2.0 → 1.3.0**，`tts-zh` 的 `sha256` 已更新 → 已装设备会重新下载。
+- 西语 `es_MX-claude-high` 训练数据集为 apache-2.0，无此限制。
 
 ### 本项目的改动
 - 机器翻译 中→西/西→中/中→英/英→西 四个方向由本项目做 **int8 动态量化**（原模型为 fp32），体积与内存显著下降，精度经真机回环验证；英→中/西→英（052 新增）直接采用 **Xenova 上游 int8 导出**（`*_quantized.onnx` 落地改名 `*_int8.onnx`），译文经 PC 与真机验证。

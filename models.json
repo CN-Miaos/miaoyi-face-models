@@ -1,225 +1,225 @@
 {
-  "schema": 1,
-  "app": "miaoyi-face",
-  "version": "1.2.0",
-  "release_tag": "v1.0",
-  "base_url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/",
-  "models_dir": "models",
-  "total_download_bytes": 1099775555,
-  "total_unpacked_bytes": 1570079817,
-  "stages": [
+ "schema": 1,
+ "app": "miaoyi-face",
+ "version": "1.3.0",
+ "release_tag": "v1.0",
+ "base_url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/",
+ "models_dir": "models",
+ "total_download_bytes": 1245468403,
+ "total_unpacked_bytes": 1726629908,
+ "stages": [
+  {
+   "stage": 1,
+   "title": {
+    "zh": "语音识别",
+    "es": "Reconocimiento de voz",
+    "en": "Speech recognition"
+   },
+   "download_bytes": 295791831,
+   "packages": [
     {
-      "stage": 1,
-      "title": {
-        "zh": "语音识别",
-        "es": "Reconocimiento de voz",
-        "en": "Speech recognition"
-      },
-      "download_bytes": 295791831,
-      "packages": [
-        {
-          "id": "asr-zh",
-          "label": {
-            "zh": "中文语音识别",
-            "es": "Voz (chino)",
-            "en": "Chinese ASR"
-          },
-          "file": "asr-zh.zip",
-          "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/asr-zh.zip",
-          "target": "",
-          "bytes": 175573598,
-          "unpacked_bytes": 198270793,
-          "sha256": "bbcc5f53b9727e8c9fa5c9b0ffb14ff32a05bd1ee47db1a8e0a8b5d1f56fa930",
-          "files": 4
-        },
-        {
-          "id": "asr-es",
-          "label": {
-            "zh": "西语语音识别",
-            "es": "Voz (español)",
-            "en": "Spanish ASR"
-          },
-          "file": "asr-es.zip",
-          "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/asr-es.zip",
-          "target": "",
-          "bytes": 119581813,
-          "unpacked_bytes": 155838792,
-          "sha256": "1b9febadff9de53cfe1db360b43b3672bd01a7c33720e231312bd2a706c74ecb",
-          "files": 4
-        },
-        {
-          "id": "vad",
-          "label": {
-            "zh": "人声检测",
-            "es": "Detección de voz",
-            "en": "Voice activity detection"
-          },
-          "file": "vad.zip",
-          "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/vad.zip",
-          "target": "",
-          "bytes": 508224,
-          "unpacked_bytes": 643854,
-          "sha256": "2154374dbc10295915c0fe8f2d959ab64646c2566327edbc7730a2f0b01b63d9",
-          "files": 1
-        },
-        {
-          "id": "denoise",
-          "label": {
-            "zh": "语音降噪",
-            "es": "Reducción de ruido",
-            "en": "Speech denoising"
-          },
-          "file": "denoise.zip",
-          "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/denoise.zip",
-          "target": "",
-          "bytes": 128196,
-          "unpacked_bytes": 535638,
-          "sha256": "9846aa63d3e19702bc5d396ba13032471848cc4390919edb7dd8f1ad93be2367",
-          "files": 1
-        }
-      ]
+     "id": "asr-zh",
+     "label": {
+      "zh": "中文语音识别",
+      "es": "Voz (chino)",
+      "en": "Chinese ASR"
+     },
+     "file": "asr-zh.zip",
+     "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/asr-zh.zip",
+     "target": "",
+     "bytes": 175573598,
+     "unpacked_bytes": 198270793,
+     "sha256": "bbcc5f53b9727e8c9fa5c9b0ffb14ff32a05bd1ee47db1a8e0a8b5d1f56fa930",
+     "files": 4
     },
     {
-      "stage": 2,
-      "title": {
-        "zh": "离线翻译",
-        "es": "Traducción sin conexión",
-        "en": "Offline translation"
-      },
-      "download_bytes": 685820433,
-      "packages": [
-        {
-          "id": "mt-zh-en",
-          "label": {
-            "zh": "翻译 中→英",
-            "es": "Traducción zh→en",
-            "en": "MT zh→en"
-          },
-          "file": "mt-zh-en.zip",
-          "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/mt-zh-en.zip",
-          "target": "mt",
-          "bytes": 155721839,
-          "unpacked_bytes": 238612734,
-          "sha256": "5fed6e1ccf29058586f73b8e7345ebc41acc447310ae207a27a25b38894997c2",
-          "files": 8
-        },
-        {
-          "id": "mt-en-es",
-          "label": {
-            "zh": "翻译 英→西",
-            "es": "Traducción en→es",
-            "en": "MT en→es"
-          },
-          "file": "mt-en-es.zip",
-          "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/mt-en-es.zip",
-          "target": "mt",
-          "bytes": 143734019,
-          "unpacked_bytes": 238601309,
-          "sha256": "e0a3edb70e544f37cd8369ef79278b9bd99d3a21307a4faf8cd001128197183e",
-          "files": 8
-        },
-        {
-          "id": "mt-es-zh",
-          "label": {
-            "zh": "翻译 西→中",
-            "es": "Traducción es→zh",
-            "en": "MT es→zh"
-          },
-          "file": "mt-es-zh.zip",
-          "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/mt-es-zh.zip",
-          "target": "mt",
-          "bytes": 153304897,
-          "unpacked_bytes": 238707861,
-          "sha256": "ca2512f58137750a40adb967eb8bbc517c6ffa6fa47189ed207b0796d4631cf2",
-          "files": 8
-        },
-        {
-          "id": "mt-en-zh",
-          "label": {
-            "zh": "英译中",
-            "es": "Traducción (inglés→chino)",
-            "en": "English→Chinese"
-          },
-          "file": "mt-en-zh.zip",
-          "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/mt-en-zh.zip",
-          "target": "mt",
-          "bytes": 118641238,
-          "unpacked_bytes": 172671312,
-          "sha256": "1ada9776d87457e5bb7a44055900000a3ff83e7b8ddd0043d625b45eb7ce1cea",
-          "files": 6
-        },
-        {
-          "id": "mt-es-en",
-          "label": {
-            "zh": "西译英",
-            "es": "Traducción (español→inglés)",
-            "en": "Spanish→English"
-          },
-          "file": "mt-es-en.zip",
-          "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/mt-es-en.zip",
-          "target": "mt",
-          "bytes": 114418440,
-          "unpacked_bytes": 172660086,
-          "sha256": "c977377d73aab035f014dd467dc44193107e4af64d86a2685b3017d7bb02ec6e",
-          "files": 6
-        }
-      ]
+     "id": "asr-es",
+     "label": {
+      "zh": "西语语音识别",
+      "es": "Voz (español)",
+      "en": "Spanish ASR"
+     },
+     "file": "asr-es.zip",
+     "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/asr-es.zip",
+     "target": "",
+     "bytes": 119581813,
+     "unpacked_bytes": 155838792,
+     "sha256": "1b9febadff9de53cfe1db360b43b3672bd01a7c33720e231312bd2a706c74ecb",
+     "files": 4
     },
     {
-      "stage": 3,
-      "title": {
-        "zh": "语音播报",
-        "es": "Síntesis de voz",
-        "en": "Speech synthesis"
-      },
-      "download_bytes": 118163291,
-      "packages": [
-        {
-          "id": "tts-zh",
-          "label": {
-            "zh": "中文播报",
-            "es": "Voz sintética (chino)",
-            "en": "Chinese TTS"
-          },
-          "file": "tts-zh.zip",
-          "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/tts-zh.zip",
-          "target": "tts",
-          "bytes": 13753396,
-          "unpacked_bytes": 20717785,
-          "sha256": "fa44c2fe14bf7b6380e1fdd0300f11ce98a3d50f90359038ee5b6268ac3a8b39",
-          "files": 3
-        },
-        {
-          "id": "tts-es",
-          "label": {
-            "zh": "西语播报",
-            "es": "Voz sintética (español)",
-            "en": "Spanish TTS"
-          },
-          "file": "tts-es.zip",
-          "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/tts-es.zip",
-          "target": "tts",
-          "bytes": 22586104,
-          "unpacked_bytes": 36297208,
-          "sha256": "95a2fad5a43dae2a1cc5965d4d1310c4bc6a8ab8fedd807ba4521846068a630e",
-          "files": 357
-        },
-        {
-          "id": "tts-en",
-          "label": {
-            "zh": "英语语音播报",
-            "es": "Voz (inglés)",
-            "en": "English TTS"
-          },
-          "file": "tts-en.zip",
-          "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/tts-en.zip",
-          "target": "tts",
-          "bytes": 81823791,
-          "unpacked_bytes": 96522445,
-          "sha256": "093061108bf0fc8794fad40fdf4e16bd9959f8dbca8ca10201cba645a473d584",
-          "files": 357
-        }
-      ]
+     "id": "vad",
+     "label": {
+      "zh": "人声检测",
+      "es": "Detección de voz",
+      "en": "Voice activity detection"
+     },
+     "file": "vad.zip",
+     "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/vad.zip",
+     "target": "",
+     "bytes": 508224,
+     "unpacked_bytes": 643854,
+     "sha256": "2154374dbc10295915c0fe8f2d959ab64646c2566327edbc7730a2f0b01b63d9",
+     "files": 1
+    },
+    {
+     "id": "denoise",
+     "label": {
+      "zh": "语音降噪",
+      "es": "Reducción de ruido",
+      "en": "Speech denoising"
+     },
+     "file": "denoise.zip",
+     "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/denoise.zip",
+     "target": "",
+     "bytes": 128196,
+     "unpacked_bytes": 535638,
+     "sha256": "9846aa63d3e19702bc5d396ba13032471848cc4390919edb7dd8f1ad93be2367",
+     "files": 1
     }
-  ]
+   ]
+  },
+  {
+   "stage": 2,
+   "title": {
+    "zh": "离线翻译",
+    "es": "Traducción sin conexión",
+    "en": "Offline translation"
+   },
+   "download_bytes": 685820433,
+   "packages": [
+    {
+     "id": "mt-zh-en",
+     "label": {
+      "zh": "翻译 中→英",
+      "es": "Traducción zh→en",
+      "en": "MT zh→en"
+     },
+     "file": "mt-zh-en.zip",
+     "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/mt-zh-en.zip",
+     "target": "mt",
+     "bytes": 155721839,
+     "unpacked_bytes": 238612734,
+     "sha256": "5fed6e1ccf29058586f73b8e7345ebc41acc447310ae207a27a25b38894997c2",
+     "files": 8
+    },
+    {
+     "id": "mt-en-es",
+     "label": {
+      "zh": "翻译 英→西",
+      "es": "Traducción en→es",
+      "en": "MT en→es"
+     },
+     "file": "mt-en-es.zip",
+     "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/mt-en-es.zip",
+     "target": "mt",
+     "bytes": 143734019,
+     "unpacked_bytes": 238601309,
+     "sha256": "e0a3edb70e544f37cd8369ef79278b9bd99d3a21307a4faf8cd001128197183e",
+     "files": 8
+    },
+    {
+     "id": "mt-es-zh",
+     "label": {
+      "zh": "翻译 西→中",
+      "es": "Traducción es→zh",
+      "en": "MT es→zh"
+     },
+     "file": "mt-es-zh.zip",
+     "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/mt-es-zh.zip",
+     "target": "mt",
+     "bytes": 153304897,
+     "unpacked_bytes": 238707861,
+     "sha256": "ca2512f58137750a40adb967eb8bbc517c6ffa6fa47189ed207b0796d4631cf2",
+     "files": 8
+    },
+    {
+     "id": "mt-en-zh",
+     "label": {
+      "zh": "英译中",
+      "es": "Traducción (inglés→chino)",
+      "en": "English→Chinese"
+     },
+     "file": "mt-en-zh.zip",
+     "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/mt-en-zh.zip",
+     "target": "mt",
+     "bytes": 118641238,
+     "unpacked_bytes": 172671312,
+     "sha256": "1ada9776d87457e5bb7a44055900000a3ff83e7b8ddd0043d625b45eb7ce1cea",
+     "files": 6
+    },
+    {
+     "id": "mt-es-en",
+     "label": {
+      "zh": "西译英",
+      "es": "Traducción (español→inglés)",
+      "en": "Spanish→English"
+     },
+     "file": "mt-es-en.zip",
+     "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/mt-es-en.zip",
+     "target": "mt",
+     "bytes": 114418440,
+     "unpacked_bytes": 172660086,
+     "sha256": "c977377d73aab035f014dd467dc44193107e4af64d86a2685b3017d7bb02ec6e",
+     "files": 6
+    }
+   ]
+  },
+  {
+   "stage": 3,
+   "title": {
+    "zh": "语音播报",
+    "es": "Síntesis de voz",
+    "en": "Speech synthesis"
+   },
+   "download_bytes": 263856139,
+   "packages": [
+    {
+     "id": "tts-zh",
+     "label": {
+      "zh": "中文播报",
+      "es": "Voz sintética (chino)",
+      "en": "Chinese TTS"
+     },
+     "file": "tts-zh.zip",
+     "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/tts-zh.zip",
+     "target": "tts",
+     "bytes": 159446244,
+     "unpacked_bytes": 177267876,
+     "sha256": "49d53cebd3d1cce94bd7db62b21bb7e0caae1d18c5ba8219227d43c3739b4a1d",
+     "files": 3
+    },
+    {
+     "id": "tts-es",
+     "label": {
+      "zh": "西语播报",
+      "es": "Voz sintética (español)",
+      "en": "Spanish TTS"
+     },
+     "file": "tts-es.zip",
+     "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/tts-es.zip",
+     "target": "tts",
+     "bytes": 22586104,
+     "unpacked_bytes": 36297208,
+     "sha256": "95a2fad5a43dae2a1cc5965d4d1310c4bc6a8ab8fedd807ba4521846068a630e",
+     "files": 357
+    },
+    {
+     "id": "tts-en",
+     "label": {
+      "zh": "英语语音播报",
+      "es": "Voz (inglés)",
+      "en": "English TTS"
+     },
+     "file": "tts-en.zip",
+     "url": "https://github.com/CN-Miaos/miaoyi-face-models/releases/download/v1.0/tts-en.zip",
+     "target": "tts",
+     "bytes": 81823791,
+     "unpacked_bytes": 96522445,
+     "sha256": "093061108bf0fc8794fad40fdf4e16bd9959f8dbca8ca10201cba645a473d584",
+     "files": 357
+    }
+   ]
+  }
+ ]
 }
